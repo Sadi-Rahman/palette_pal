@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1 className="header-title">Color Palette Generator</h1>
+        <h1 className="header-title">Palette Pal</h1>
         <div className="controls">
           <select value={theme} onChange={handleThemeChange}>
             <option value="modern">Modern</option>

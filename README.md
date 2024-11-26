@@ -1,8 +1,9 @@
-# React + Vite
+# Palette Pal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that generates color palettes based on different themes. Palette Pal is an interactive web application designed to help users create custom color schemes for their projects. It offers three main themes - Modern, Soft, and Minimalist - each generating unique and aesthetically pleasing color palettes.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- chroma-js library for color manipulation
+- FontAwesome Icons for social media links
