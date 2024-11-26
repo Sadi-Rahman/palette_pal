@@ -3,6 +3,8 @@ import chroma from "chroma-js";
 import "./App.css";
 import ColorPalette from "./components/ColorPalette";
 import ButtonPreview from "./components/ButtonPreview";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const [theme, setTheme] = useState("modern");
@@ -57,7 +59,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>Color Palette Generator</h1>
+        <h1 className="header-title">Color Palette Generator</h1>
         <div className="controls">
           <select value={theme} onChange={handleThemeChange}>
             <option value="modern">Modern</option>
@@ -83,6 +85,23 @@ function App() {
           <ButtonPreview colors={palette.dark} />
         </section>
       </main>
+
+      <footer className="app-footer">
+        <a
+          href="https://github.com/Sadi-Rahman/color_gen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faGithub} size="2x" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/md-abu-bakar-siddique-sadi-7660aa69/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
+      </footer>
     </div>
   );
 }
