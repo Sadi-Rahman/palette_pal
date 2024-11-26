@@ -7,3 +7,5 @@ A React-based web application that generates color palettes based on different t
 - React.js
 - chroma-js library for color manipulation
 - FontAwesome Icons for social media links
+
+![alt text](https://github.com/Sadi-Rahman/color_gen/blob/main/public/ss.png)
