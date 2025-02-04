@@ -9,6 +9,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 function App() {
   const [theme, setTheme] = useState("modern");
   const [palette, setPalette] = useState(generatePalette("modern"));
+  const [refresh, setRefresh] = useState(false);
 
   function generatePalette(type) {
     let baseHue;
@@ -48,7 +49,11 @@ function App() {
   }
 
   const handleGenerate = () => {
-    setPalette(generatePalette(theme));
+    setRefresh(true);
+    setTimeout(() => {
+      setPalette(generatePalette(theme));
+      setRefresh(false);
+    }, 200);
   };
 
   const handleThemeChange = (e) => {
@@ -73,13 +78,13 @@ function App() {
       </header>
 
       <main>
-        <section className="light-mode">
+        <section className={`light-mode ${refresh ? "refresh" : ""}`}>
           <h2>Light Mode</h2>
           <ColorPalette colors={palette.light} />
           <ButtonPreview colors={palette.light} />
         </section>
 
-        <section className="dark-mode">
+        <section className={`dark-mode ${refresh ? "refresh" : ""}`}>
           <h2>Dark Mode</h2>
           <ColorPalette colors={palette.dark} />
           <ButtonPreview colors={palette.dark} />
@@ -88,7 +93,7 @@ function App() {
 
       <footer className="app-footer">
         <a
-          href="https://github.com/Sadi-Rahman/color_gen"
+          href="https://github.com/Sadi-Rahman/palette_pal"
           target="_blank"
           rel="noopener noreferrer"
         >

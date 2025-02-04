@@ -1,5 +1,6 @@
 :root {
   --transition-speed: 0.3s;
+  --refresh-animation-speed: 0.7s;
 }
 
 .app {
@@ -68,6 +69,8 @@ main {
 .dark-mode {
   padding: 2rem;
   border-radius: 8px;
+  transition: background-color var(--refresh-animation-speed) ease-in-out,
+    color var(--refresh-animation-speed) ease-in-out;
 }
 
 .light-mode {
@@ -78,6 +81,20 @@ main {
 .dark-mode {
   background-color: #1a1a1a;
   color: #ffffff;
+}
+
+.light-mode.refresh,
+.dark-mode.refresh {
+  animation: refreshAnimation var(--refresh-animation-speed) ease-in-out;
+}
+
+@keyframes refreshAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .color-palette {
